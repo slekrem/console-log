@@ -1,0 +1,26 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<!--
+`console-log`
+
+
+@demo demo/index.html
+-->
+
+<dom-module id="console-log">
+  <template></template>
+  <script>
+    Polymer({
+      is: 'console-log',
+      properties: {
+        value: {
+          type: Object,
+          observer: "_valueChanged"
+        }
+      },
+      _valueChanged: function(value) {
+        console.log(value);
+      }
+    });
+  </script>
+</dom-module>
